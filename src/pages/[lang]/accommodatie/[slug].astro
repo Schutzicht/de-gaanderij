@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ScrollReveal from '../../../components/ui/ScrollReveal.astro';
+import ParallaxImage from '../../../components/ui/ParallaxImage.astro';
+import { rooms } from '../../../data/rooms';
+
+export function getStaticPaths() {
+  const paths = [];
+  ['nl', 'en', 'de'].forEach(lang => {
+    const langRooms = rooms[lang] || rooms.nl;
+    langRooms.forEach(room => {
+      paths.push({ 
+        params: { lang, slug: room.slug },
+        props: { room }
+      });
+    });
+  });
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const { room } = Astro.props;
+
+if (!room) {
+  return Astro.redirect(`/${lang}/accommodatie`);
+}
+---
+
+<Layout title={`B&B De Gaanderij - ${room.title}`} lang={lang}>
+  
+  <!-- Hero Section -->
+  <div class="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
+        <ParallaxImage 
+            src={room.images?.[0]} 
+            alt={room.title} 
+            class="h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-0 left-0 w-full p-8 md:p-20 z-10">
+            <ScrollReveal animation="fade-up">
+                <div class="inline-block bg-sea-blue text-white text-xs font-bold uppercase tracking-widest px-3 py-1 mb-4">
+                    {lang === 'nl' ? 'Onze Kamers' : 'Our Rooms'}
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6 drop-shadow-xl">{room.title}</h1>
+                <p class="text-white/80 text-xl font-light max-w-2xl">{room.headline}</p>
+            </ScrollReveal>
+        </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          
+          <!-- Main Content -->
+          <div class="lg:col-span-7">
+              <ScrollReveal animation="fade-up">
+                  <h2 class="text-3xl font-heading font-light text-slate-900 mb-8">{lang === 'nl' ? 'Over deze loft' : 'About this loft'}</h2>
+                  <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                      {room.desc}
+                  </p>
+                  <p class="text-lg text-slate-600 leading-relaxed mb-12">
+                      {room.longDesc}
+                  </p>
+
+                  <h3 class="text-2xl font-heading font-light text-slate-900 mb-6">{lang === 'nl' ? 'Voorzieningen' : 'Amenities'}</h3>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                      {room.amenities.map(item => (
+                          <div class="flex items-center text-slate-600 border-b border-slate-100 pb-3">
+                              <span class="text-sea-blue mr-3 text-lg">✓</span>
+                              {item}
+                          </div>
+                      ))}
+                  </div>
+              </ScrollReveal>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="lg:col-span-5">
+              <div class="bg-white p-8 border border-slate-100 shadow-xl rounded-sm sticky top-32">
+                  <div class="flex justify-between items-center mb-8 pb-8 border-b border-slate-100">
+                      <span class="text-slate-500 font-medium">{lang === 'nl' ? 'Prijs per nacht' : 'Price per night'}</span>
+                      <span class="text-3xl font-heading font-bold text-sea-blue">{room.price}</span>
+                  </div>
+
+                  <a 
+                    href={`/${lang}/contact`} 
+                    class="block w-full py-4 bg-sea-blue text-white text-center font-bold uppercase tracking-widest hover:bg-slate-900 transition-colors duration-300 mb-4"
+                  >
+                    {lang === 'nl' ? 'Reserveren' : 'Book Now'}
+                  </a>
+                  
+                  <p class="text-center text-xs text-slate-400 mt-4 leading-relaxed">
+                    {lang === 'nl' ? 'Bestariegantie via direct contact. Inclusief ontbijt en toeristenbelasting.' : 'Best rate guarantee via direct contact. Breakfast and taxes included.'}
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Photo Gallery -->
+  <div class="bg-slate-50 py-20 lg:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-heading font-light text-slate-900 mb-12 text-center">{lang === 'nl' ? 'Impressie' : 'Gallery'}</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {room.images.map((img, index) => (
+                  <ScrollReveal animation="fade-up" delay={index * 0.1}>
+                      <div class="group relative aspect-[4/3] overflow-hidden rounded-sm cursor-pointer shadow-md">
+                          <img 
+                            src={img} 
+                            alt={`${room.title} image ${index + 1}`} 
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                      </div>
+                  </ScrollReveal>
+              ))}
+          </div>
+      </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="border-t border-slate-100 py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+          <a href={`/${lang}/accommodatie`} class="text-slate-500 hover:text-sea-blue font-bold uppercase tracking-widest text-sm transition-colors">
+              ← {lang === 'nl' ? 'Terug naar overzicht' : 'Back to overview'}
+          </a>
+      </div>
+  </div>
+
+</Layout>

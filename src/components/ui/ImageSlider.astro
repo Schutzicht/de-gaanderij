@@ -1,0 +1,85 @@
+---
+const { images, id = "gallery-slider", height = "h-[500px] md:h-[600px]" } = Astro.props;
+---
+
+<div class={`relative w-full ${height} overflow-hidden group rounded-sm shadow-xl bg-stone-200`} id={id}>
+  <div class="flex h-full transition-transform duration-700 ease-in-out will-change-transform" id={`${id}-track`}>
+    {images.map((img, index) => (
+      <div class="w-full flex-shrink-0 h-full relative">
+        <img 
+          src={img} 
+          alt={`Slide ${index + 1}`} 
+          class="w-full h-full object-cover"
+          loading={index === 0 ? "eager" : "lazy"}
+        />
+        <div class="absolute inset-0 bg-black/5"></div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-3 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" id={`${id}-prev`}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </button>
+  <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-3 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" id={`${id}-next`}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+    {images.map((_, index) => (
+      <button 
+        class={`w-2 h-2 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-6' : 'bg-white/50 hover:bg-white'}`}
+        data-index={index}
+        aria-label={`Go to slide ${index + 1}`}
+      ></button>
+    ))}
+  </div>
+</div>
+
+<script define:vars={{ id, imageCount: images.length }}>
+  const track = document.getElementById(`${id}-track`);
+  const prevBtn = document.getElementById(`${id}-prev`);
+  const nextBtn = document.getElementById(`${id}-next`);
+  const dots = document.querySelectorAll(`#${id} .absolute.bottom-6 button`);
+  
+  let currentIndex = 0;
+
+  const updateSlide = (index) => {
+    currentIndex = index;
+    // Loop
+    if (currentIndex < 0) currentIndex = imageCount - 1;
+    if (currentIndex >= imageCount) currentIndex = 0;
+
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Update dots
+    dots.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.classList.remove('bg-white/50', 'w-2');
+        dot.classList.add('bg-white', 'w-6');
+      } else {
+        dot.classList.add('bg-white/50', 'w-2');
+        dot.classList.remove('bg-white', 'w-6');
+      }
+    });
+  };
+
+  prevBtn.addEventListener('click', () => updateSlide(currentIndex - 1));
+  nextBtn.addEventListener('click', () => updateSlide(currentIndex + 1));
+  
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      updateSlide(parseInt(dot.dataset.index));
+    });
+  });
+
+  // Auto slide
+  setInterval(() => {
+    updateSlide(currentIndex + 1);
+  }, 5000);
+</script>

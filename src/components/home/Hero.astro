@@ -1,0 +1,85 @@
+---
+import ScrollReveal from '../ui/ScrollReveal.astro';
+
+const { lang } = Astro.props;
+
+const content = {
+  nl: {
+    subtitle: "Luxe gastenverblijf in een landelijke omgeving",
+    cta: "Bekijk kamers"
+  },
+  en: {
+    subtitle: "Luxury guesthouse in a rural setting",
+    cta: "View rooms"
+  },
+  de: {
+    subtitle: "Luxus-Gästehaus in ländlicher Umgebung",
+    cta: "Zimmer ansehen"
+  }
+};
+
+const t = content[lang] || content.nl;
+---
+
+<section class="relative h-[85vh] md:h-screen min-h-[500px] md:min-h-[800px] flex items-center justify-center overflow-hidden">
+  
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/images/de-gaanderij/hero-final.jpeg" 
+      alt="De Gaanderij Bed and Breakfast" 
+      class="w-full h-full object-cover animate-scale-slow"
+    />
+    <div class="absolute inset-0 bg-slate-900/40"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-0 md:mt-20">
+    
+    <ScrollReveal animation="fade-up" duration={1} delay={0.2}>
+        <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 mb-8">
+            <p class="text-white text-xs md:text-sm font-bold uppercase tracking-widest">
+                Barendrecht • Zuid-Holland
+            </p>
+        </div>
+    </ScrollReveal>
+
+    <ScrollReveal animation="fade-up" duration={1} delay={0.3}>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl text-white font-heading font-bold tracking-tighter leading-none mb-8 drop-shadow-xl">
+            DE GAANDERIJ
+        </h1>
+    </ScrollReveal>
+
+    <ScrollReveal animation="fade-up" duration={1} delay={0.4}>
+        <p class="text-white/90 text-xl md:text-2xl font-medium max-w-2xl mx-auto mb-12 leading-relaxed">
+            {lang === 'nl' ? 'Modern comfort & gastvrijheid' : (lang === 'de' ? 'Moderner Komfort & Gastfreundschaft' : 'Modern Living & Hospitality')}
+        </p>
+    </ScrollReveal>
+
+    <ScrollReveal animation="fade-up" duration={1} delay={0.5}>
+        <a 
+            href={`/${lang}/accommodatie`} 
+            class="group inline-block px-10 py-5 bg-white text-slate-900 hover:bg-sea-blue hover:text-white font-bold uppercase tracking-widest text-sm transition-all duration-300 rounded-sm shadow-xl"
+        >
+            {t.cta}
+        </a>
+    </ScrollReveal>
+
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+     <div class="w-[1px] h-24 bg-gradient-to-b from-white to-transparent opacity-50"></div>
+  </div>
+
+</section>
+
+<style>
+    /* Slow Ken Burns Effect */
+    @keyframes scale-slow {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+    .animate-scale-slow {
+        animation: scale-slow 20s linear infinite alternate;
+    }
+</style>

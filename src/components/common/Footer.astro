@@ -1,0 +1,100 @@
+---
+const { lang } = Astro.props;
+import ScrollReveal from '../ui/ScrollReveal.astro';
+import Logo from '../ui/Logo.astro';
+
+const content = {
+  nl: {
+    cta: "Bekijk beschikbaarheid",
+    contact: "Contact & Locatie",
+    links: "Navigatie",
+    home: "Home",
+    accommodation: "Accommodatie",
+    surroundings: "Omgeving",
+    gallery: "Gallerij"
+  },
+  en: {
+    cta: "Check availability",
+    contact: "Contact & Location",
+    links: "Navigation",
+    home: "Home",
+    accommodation: "Accommodation",
+    surroundings: "Surroundings",
+    gallery: "Gallery"
+  },
+  de: {
+    cta: "Verfügbarkeit prüfen",
+    contact: "Kontakt & Lage",
+    links: "Navigation",
+    home: "Home",
+    accommodation: "Unterkunft",
+    surroundings: "Umgebung",
+    gallery: "Galerie"
+  }
+};
+
+const t = content[lang] || content.nl;
+---
+
+<!-- Footer Container -->
+<footer class="relative mt-12 md:mt-48 text-white/90">
+  
+  <!-- Main Dark Block: Moving away from "Corporate Blue" to "Luxury Slate" -->
+  <div class="bg-slate-950 pt-24 pb-12 relative z-20">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <ScrollReveal animation="fade-up" duration={1.5}>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 items-start mb-24 border-b border-white/5 pb-20">
+                
+                <!-- Brand Column -->
+                <div class="md:col-span-12 lg:col-span-5">
+                    <div class="w-24 mb-10 opacity-90 hover:opacity-100 transition-opacity">
+                        <Logo color="white" />
+                    </div>
+                    <p class="text-white/60 font-light leading-relaxed max-w-sm text-sm tracking-wide">
+                       De Gaanderij Bed and Breakfast is een unieke plek in Barendrecht. Geniet van rust, comfort en gastvrijheid met een score van 9.2.<br/>
+                       <span class="mt-6 block italic opacity-70">Barendrecht, Zuid-Holland</span>
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="md:col-span-6 lg:col-span-3">
+                    <h3 class="font-heading text-xs uppercase tracking-[0.3em] font-bold mb-10 text-white/60">{t.links}</h3>
+                    <ul class="space-y-4 font-light text-white/70 text-sm">
+                        <li><a href={`/${lang}/`} class="hover:text-white transition-all hover:pl-2">{t.home}</a></li>
+                        <li><a href={`/${lang}/accommodatie`} class="hover:text-white transition-all hover:pl-2">{t.accommodation}</a></li>
+                        <li><a href={`/${lang}/omgeving`} class="hover:text-white transition-all hover:pl-2">{t.surroundings}</a></li>
+                        <li><a href={`/${lang}/gallerij`} class="hover:text-white transition-all hover:pl-2">{t.gallery}</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA Column -->
+                <div class="md:col-span-6 lg:col-span-4 flex flex-col md:items-end">
+                    <a 
+                        href={`/${lang}/contact`} 
+                        class="group relative inline-flex items-center gap-6 px-10 py-5 border border-white/20 hover:border-white/50 text-white font-bold uppercase tracking-[0.3em] text-[10px] transition-all rounded-full overflow-hidden"
+                    >
+                        <span class="relative z-10">{t.cta}</span>
+                        <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 opacity-5"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-[10px] text-white/40 font-bold tracking-[0.2em] uppercase">
+                <div class="flex items-center gap-8 mb-6 md:mb-0">
+                    <span>&copy; {new Date().getFullYear()} B&B DE GAANDERIJ</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="opacity-70">DESIGNED BY</span>
+                    <a href="https://zee-zicht.nl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">ZEEZICHT</a>
+                </div>
+            </div>
+
+        </ScrollReveal>
+      </div>
+  </div>
+</footer>

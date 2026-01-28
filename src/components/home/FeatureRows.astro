@@ -1,0 +1,106 @@
+---
+import ScrollReveal from '../ui/ScrollReveal.astro';
+import ParallaxImage from '../ui/ParallaxImage.astro';
+
+const { lang } = Astro.props;
+
+const content = {
+  nl: {
+    features: [
+      {
+        title: "Eigen Keuken & Faciliteiten",
+        desc: "Onze lofts (Blue & Yellow) beschikken over een eigen keuken. Perfect voor als u zelf wilt koken. Daarnaast bieden we gratis WiFi en TV met streamingdiensten.",
+        img: "/images/de-gaanderij/kitchen-feature.jpeg",
+        stat: "Van alle gemakken voorzien"
+      },
+      {
+        title: "Heerlijk Ontbijt",
+        desc: "Wij serveren een uitgebreid ontbijt met eigengemaakte en biologische producten. Vegetarisch, veganistisch, glutenvrij of lactosevrij is mogelijk op verzoek.",
+        img: "/images/de-gaanderij/gallery_06.webp",
+        stat: "Vers & Biologisch"
+      }
+    ]
+  },
+  en: {
+    features: [
+      {
+        title: "Private Kitchen & Facilities",
+        desc: "Our lofts (Blue & Yellow) have their own kitchen. Perfect if you want to cook yourself. We also offer free WiFi and TV with streaming services.",
+        img: "/images/de-gaanderij/kitchen-feature.jpeg",
+        stat: "Fully Equipped"
+      },
+      {
+        title: "Delicious Breakfast",
+        desc: "We serve an extensive breakfast with homemade and organic products. Vegetarian, vegan, gluten-free or lactose-free is available on request.",
+        img: "/images/de-gaanderij/gallery_06.webp",
+        stat: "Fresh & Organic"
+      }
+    ]
+  },
+  de: {
+    features: [
+      {
+        title: "Eigene Küche & Ausstattung",
+        desc: "Unsere Lofts (Blau & Gelb) verfügen über eine eigene Küche. Perfekt für Selbstversorger. Wir bieten auch kostenloses WLAN und TV mit Streaming-Diensten.",
+        img: "/images/de-gaanderij/kitchen-feature.jpeg",
+        stat: "Voll ausgestattet"
+      },
+      {
+        title: "Köstliches Frühstück",
+        desc: "Wir servieren ein reichhaltiges Frühstück mit hausgemachten und Bio-Produkten. Vegetarisch, vegan, glutenfrei oder laktosefrei ist auf Anfrage möglich.",
+        img: "/images/de-gaanderij/gallery_06.webp",
+        stat: "Frisch & Bio"
+      }
+    ]
+  }
+};
+
+const t = content[lang] || content.nl;
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {t.features.map((feature, index) => (
+      <div class={`flex flex-col md:flex-row items-center gap-12 md:gap-24 mb-32 last:mb-0 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+        
+        <!-- Image Side -->
+        <div class="w-full md:w-1/2 relative group">
+           <ScrollReveal animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} duration={1.2}>
+               <div class="relative overflow-hidden rounded-sm aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/3]">
+                  <ParallaxImage 
+                    src={feature.img} 
+                    alt={feature.title} 
+                    class="h-full w-full object-cover"
+                  />
+                  <!-- Stat Badge overlay -->
+                  <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 text-sea-blue font-heading font-bold shadow-lg z-10 border border-white/20">
+                    {feature.stat}
+                  </div>
+               </div>
+           </ScrollReveal>
+        </div>
+
+        <!-- Text Side -->
+        <div class="w-full md:w-1/2">
+           <ScrollReveal animation="fade-up" delay={0.3}>
+               <div class="w-16 h-[2px] bg-dune-sand mb-6"></div>
+               <h3 class="text-3xl md:text-5xl font-heading font-light text-slate-900 mb-6 leading-tight">
+                 {feature.title}
+               </h3>
+               <p class="text-lg text-slate-600 font-light leading-relaxed mb-8 max-w-lg">
+                 {feature.desc}
+               </p>
+               <div class="flex items-center text-sm font-bold uppercase tracking-widest text-sea-blue group cursor-pointer">
+                  <span class="border-b border-sea-blue pb-1">
+                      {lang === 'nl' ? 'Ontdek meer' : lang === 'de' ? 'Mehr entdecken' : 'Discover more'}
+                  </span>
+               </div>
+           </ScrollReveal>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+</section>

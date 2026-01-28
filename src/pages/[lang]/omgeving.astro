@@ -1,0 +1,195 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ParallaxImage from '../../components/ui/ParallaxImage.astro';
+import ScrollReveal from '../../components/ui/ScrollReveal.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'nl' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'de' } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+const content = {
+  nl: {
+    title: "Omgeving",
+    headline: "Ontdek Barendrecht & Rotterdam",
+    intro: "Gelegen onder de rook van Rotterdam, biedt B&B De Gaanderij de perfecte uitvalsbasis voor stad, natuur en cultuur.",
+    labels: {
+      highlights: "Highlights",
+      dining: "Eten & Drinken",
+      sights: "Bezienswaardigheden"
+    },
+    spots: [
+      { title: "Rotterdam Centrum", desc: "Binnen 15 minuten in het hart van Rotterdam. Ontdek de Markthal, Kubuswoningen en de Euromast." },
+      { title: "Oude Maas", desc: "Prachtige wandel- en fietsroutes langs de Oude Maas. Geniet van de rust en het uitzicht over het water." },
+      { title: "Kinderdijk", desc: "Werelderfgoed op fietsafstand. Bezoek de 19 molens en leer alles over het Nederlandse watermanagement." },
+      { title: "Biesbosch", desc: "Nationaal Park De Biesbosch ligt op korte afstand. Huur een bootje of ga mee met een rondvaart." }
+    ],
+    dining: [
+      { name: "Oude Maas", desc: "Dineren met uitzicht op de rivier." },
+      { name: "Centrum Barendrecht", desc: "Diverse gezellige restaurants en terrassen in het oude centrum." },
+      { name: "Markthal Rotterdam", desc: "Een culinaire belevenis met kraampjes en restaurants van over de hele wereld." },
+      { name: "Hotel Ara", desc: "Luxe dineren in een prachtige omgeving." }
+    ],
+    sights: [
+      { name: "Euromast", desc: "Het hoogste uitkijkpunt van Nederland." },
+      { name: "Erasmusbrug", desc: "Het icoon van Rotterdam, 'De Zwaan'." },
+      { name: "Diergaarde Blijdorp", desc: "Een van de mooiste dierentuinen van Europa." },
+      { name: "SS Rotterdam", desc: "Ontdek het historische stoomschip aan de kade." }
+    ]
+  },
+  en: {
+    title: "Surroundings",
+    headline: "Discover Barendrecht & Rotterdam",
+    intro: "Located near Rotterdam, B&B De Gaanderij offers the perfect base for city, nature, and culture.",
+    labels: {
+      highlights: "Highlights",
+      dining: "Dining & Drinks",
+      sights: "Sights"
+    },
+    spots: [
+      { title: "Rotterdam Center", desc: "Within 15 minutes in the heart of Rotterdam. Discover the Markthal, Cube Houses and the Euromast." },
+      { title: "Old Meuse", desc: "Beautiful walking and cycling routes along the Old Meuse river. Enjoy the peace and the view over the water." },
+      { title: "Kinderdijk", desc: "World Heritage within cycling distance. Visit the 19 windmills and learn all about Dutch water management." },
+      { title: "Biesbosch", desc: "National Park De Biesbosch is a short distance away. Rent a boat or join a cruise." }
+    ],
+    dining: [
+      { name: "Old Meuse", desc: "Dining with a view of the river." },
+      { name: "Barendrecht Center", desc: "Various cozy restaurants and terraces in the old center." },
+      { name: "Markthal Rotterdam", desc: "A culinary experience with stalls and restaurants from all over the world." },
+      { name: "Hotel Ara", desc: "Luxury dining in a beautiful setting." }
+    ],
+    sights: [
+      { name: "Euromast", desc: "The highest lookout point in the Netherlands." },
+      { name: "Erasmus Bridge", desc: "The icon of Rotterdam, 'The Swan'." },
+      { name: "Rotterdam Zoo", desc: "One of the most beautiful zoos in Europe." },
+      { name: "SS Rotterdam", desc: "Discover the historic steamship at the quay." }
+    ]
+  },
+  de: {
+    title: "Umgebung",
+    headline: "Entdecken Sie Barendrecht & Rotterdam",
+    intro: "In der Nähe von Rotterdam gelegen, bietet das B&B De Gaanderij den perfekten Ausgangspunkt für Stadt, Natur und Kultur.",
+    labels: {
+      highlights: "Highlights",
+      dining: "Essen & Trinken",
+      sights: "Sehenswürdigkeiten"
+    },
+    spots: [
+      { title: "Rotterdam Zentrum", desc: "Innerhalb von 15 Minuten im Herzen von Rotterdam. Entdecken Sie die Markthal, Kubushäuser und den Euromast." },
+      { title: "Alte Maas", desc: "Wunderschöne Wander- und Radwege entlang der Alten Maas. Genießen Sie die Ruhe und den Blick auf das Wasser." },
+      { title: "Kinderdijk", desc: "Weltkulturerbe in Fahrradentfernung. Besuchen Sie die 19 Mühlen und erfahren Sie alles über das niederländische Wassermanagement." },
+      { title: "Biesbosch", desc: "Nationalpark De Biesbosch ist nur eine kurze Strecke entfernt. Mieten Sie ein Boot oder machen Sie eine Kreuzfahrt." }
+    ],
+    dining: [
+      { name: "Alte Maas", desc: "Essen mit Blick auf den Fluss." },
+      { name: "Zentrum Barendrecht", desc: "Verschiedene gemütliche Restaurants und Terrassen im alten Zentrum." },
+      { name: "Markthal Rotterdam", desc: "Ein kulinarisches Erlebnis mit Ständen und Restaurants aus aller Welt." },
+      { name: "Hotel Ara", desc: "Luxuriöses Essen in wunderschöner Umgebung." }
+    ],
+    sights: [
+      { name: "Euromast", desc: "Der höchste Aussichtspunkt der Niederlande." },
+      { name: "Erasmusbrücke", desc: "Das Wahrzeichen von Rotterdam, 'Der Schwan'." },
+      { name: "Zoo Blijdorp", desc: "Einer der schönsten Zoos in Europa." },
+      { name: "SS Rotterdam", desc: "Entdecken Sie das historische Dampfschiff am Kai." }
+    ]
+  }
+};
+
+const t = content[lang] || content.nl;
+
+const sections = [
+    {
+        id: 'highlights',
+        label: t.labels.highlights,
+        items: t.spots,
+        image: '/images/de-gaanderij/outdoor-03.webp', 
+        align: 'left'
+    },
+    {
+        id: 'dining',
+        label: t.labels.dining,
+        items: t.dining.map(i => ({ title: i.name, desc: i.desc })),
+        image: '/images/de-gaanderij/gallery_06.webp', 
+        align: 'right'
+    },
+    {
+        id: 'sights',
+        label: t.labels.sights,
+        items: t.sights.map(i => ({ title: i.name, desc: i.desc })),
+        image: '/images/de-gaanderij/outdoor-02.webp', 
+        align: 'left'
+    }
+];
+---
+
+<Layout title={`B&B De Gaanderij - ${t.title}`} lang={lang}>
+  
+  <!-- Hero -->
+  <div class="relative py-32 bg-stone-50 text-center overflow-hidden">
+     <div class="relative z-10 max-w-4xl mx-auto px-4">
+        <ScrollReveal animation="fade-up">
+            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-8 text-sea-blue tracking-tight">{t.headline}</h1>
+            <p class="text-xl text-slate-600 leading-relaxed font-light">{t.intro}</p>
+        </ScrollReveal>
+     </div>
+     <!-- Background decoration -->
+      <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+          <div class="absolute top-10 right-10 w-64 h-64 rounded-full bg-sea-blue blur-3xl"></div>
+          <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-slate-900 blur-3xl"></div>
+      </div>
+  </div>
+
+  <div class="pb-32">
+    {sections.map((section, index) => (
+        <section class="py-20 md:py-32 border-b border-slate-100 last:border-0 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class={`flex flex-col ${section.align === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 lg:gap-24 items-start`}>
+                    
+                    <!-- Visual Side (Sticky) -->
+                    <div class="w-full lg:w-5/12 lg:sticky lg:top-32 self-start">
+                        <ScrollReveal animation={section.align === 'right' ? 'slide-right' : 'slide-left'} duration={1}>
+                            <div class="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl group">
+                                <ParallaxImage 
+                                    src={section.image} 
+                                    alt={section.label} 
+                                    class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                <div class="absolute bottom-8 left-8">
+                                    <h2 class="text-4xl font-heading font-bold text-white mb-2">{section.label}</h2>
+                                    <div class="w-12 h-1 bg-white/50"></div>
+                                </div>
+                            </div>
+                        </ScrollReveal>
+                    </div>
+
+                    <!-- Content Side (List) -->
+                    <div class="w-full lg:w-7/12 pt-8">
+                        <div class="grid grid-cols-1 gap-12">
+                            {section.items.map((item, i) => (
+                                <ScrollReveal animation="fade-up" delay={i * 0.1}>
+                                    <div class="group border-l-2 border-slate-100 pl-8 hover:border-sea-blue transition-colors duration-300">
+                                        <h3 class="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-sea-blue transition-colors">
+                                            {item.title}
+                                        </h3>
+                                        <p class="text-lg text-slate-600 font-light leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    ))}
+  </div>
+
+</Layout>
