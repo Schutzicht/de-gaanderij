@@ -17,9 +17,9 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 
 const title = {
-  nl: "B&B De Gaanderij - Luxe Verblijf in Barendrecht",
-  en: "B&B De Gaanderij - Luxury Stay in Barendrecht",
-  de: "B&B De Gaanderij - Luxusaufenthalt in Barendrecht"
+  nl: "Accommodatie Claercamp - Uniek verblijf in Rinsumageest",
+  en: "Accommodatie Claercamp - Unique Stay in Rinsumageest",
+  de: "Accommodatie Claercamp - Einzigartiger Aufenthalt in Rinsumageest"
 };
 ---
 
@@ -40,13 +40,13 @@ const title = {
                 <ScrollReveal animation="fade-up" duration={1.2}>
                     <div class="relative aspect-[3/4] max-w-sm mx-auto md:mx-0 shadow-xl rounded-sm overflow-hidden">
                         <img 
-                            src="/images/de-gaanderij/hero-new.webp" 
-                            alt="B&B De Gaanderij" 
+                            src="/images/claercamp/exterior.webp" 
+                            alt="Accommodatie Claercamp" 
                             class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000"
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div class="absolute bottom-8 left-8 text-white">
-                            <div class="font-heading text-3xl">De Gaanderij</div>
+                            <div class="font-heading text-3xl">Claercamp</div>
                             <div class="text-sm uppercase tracking-widest opacity-80">{lang === 'nl' ? 'Uw Verblijf' : 'Your Stay'}</div>
                         </div>
                     </div>
@@ -59,12 +59,12 @@ const title = {
             <div class="w-full md:w-1/2">
                 <ScrollReveal animation="fade-up" delay={0.3}>
                     <h2 class="text-4xl md:text-6xl font-heading font-light text-slate-900 mb-8">
-                        {lang === 'nl' ? 'Welkom in Barendrecht' : lang === 'de' ? 'Willkommen in Barendrecht' : 'Welcome to Barendrecht'}
+                        {lang === 'nl' ? 'Welkom in Rinsumageest' : lang === 'de' ? 'Willkommen in Rinsumageest' : 'Welcome to Rinsumageest'}
                     </h2>
                     <p class="text-xl text-stone-600 font-light leading-relaxed mb-8 italic">
-                        "{lang === 'nl' ? 'Ervaar de rust en luxe bij De Gaanderij. Een perfecte plek om even te ontsnappen aan de drukte en te genieten van alles wat Barendrecht en omgeving te bieden heeft.' : 
-                        lang === 'de' ? 'Erleben Sie Ruhe und Luxus im De Gaanderij. Ein perfekter Ort, um dem Trubel zu entfliehen und alles zu genießen, was Barendrecht und Umgebung zu bieten haben.' : 
-                        'Experience peace and luxury at De Gaanderij. A perfect place to escape the hustle and bustle and enjoy everything Barendrecht and surroundings have to offer.'}"
+                        "{lang === 'nl' ? 'Ervaar de rust en ruimte bij Accommodatie Claercamp. Een perfecte plek om de Friese natuur en cultuur te ontdekken vanuit een historische locatie.' : 
+                        lang === 'de' ? 'Erleben Sie Ruhe und Raum im Accommodatie Claercamp. Ein perfekter Ort, um die friesische Natur und Kultur von einem historischen Standort aus zu entdecken.' : 
+                        'Experience peace and space at Accommodatie Claercamp. A perfect place to discover Frisian nature and culture from a historic location.'}"
                     </p>
                     <div class="w-24 h-[1px] bg-sea-blue/30"></div>
                 </ScrollReveal>

@@ -16,20 +16,20 @@ const { lang } = Astro.params;
 const content = {
   nl: {
     title: "Accommodatie",
-    headline: "Luxe Lofts in Barendrecht",
-    intro: "Ontdek onze ruime lofts, elk met een unieke sfeer en van alle gemakken voorzien. Perfect voor een kort of lang verblijf.",
+    headline: "Appartementen & Kamers",
+    intro: "Ontdek onze unieke verblijven, elk met een eigen sfeer en van alle gemakken voorzien. Perfect voor een kort of lang verblijf.",
     btnText: "Bekijk Details"
   },
   en: {
     title: "Accommodation",
-    headline: "Luxury Lofts in Barendrecht",
-    intro: "Discover our spacious lofts, each with a unique atmosphere and fully equipped. Perfect for a short or long stay.",
+    headline: "Apartments & Rooms",
+    intro: "Discover our unique stays, each with a unique atmosphere and fully equipped. Perfect for a short or long stay.",
     btnText: "View Details"
   },
   de: {
     title: "Unterkunft",
-    headline: "Luxus-Lofts in Barendrecht",
-    intro: "Entdecken Sie unsere geräumigen Lofts, jedes mit einzigartiger Atmosphäre und voll ausgestattet. Perfekt für einen kurzen oder langen Aufenthalt.",
+    headline: "Apartments & Zimmer",
+    intro: "Entdecken Sie unsere einzigartigen Unterkünfte, jede mit einzigartiger Atmosphäre und voll ausgestattet. Perfekt für einen kurzen oder langen Aufenthalt.",
     btnText: "Details Ansehen"
   }
 };
@@ -39,7 +39,7 @@ import { rooms } from '../../../data/rooms';
 const currentRooms = rooms[lang] || rooms.nl;
 ---
 
-<Layout title={`B&B De Gaanderij - ${t.title}`} lang={lang}>
+<Layout title={`Accommodatie Claercamp - ${t.title}`} lang={lang}>
   
   <!-- Minimal Header -->
   <div class="relative bg-stone-50 py-32 text-center text-slate-800">
@@ -132,7 +132,7 @@ const currentRooms = rooms[lang] || rooms.nl;
                         </li>
                         <li class="flex justify-between items-center border-b border-slate-200 pb-2">
                               <span class="font-bold text-slate-700">{lang === 'nl' ? 'Ontbijt' : 'Breakfast'}</span>
-                              <span class="text-slate-500">{lang === 'nl' ? 'Inclusief' : 'Included'}</span>
+                              <span class="text-slate-500">{lang === 'nl' ? 'Niet inbegrepen' : 'Not included'}</span>
                         </li>
                    </ul>
                 </div>

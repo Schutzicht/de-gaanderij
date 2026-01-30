@@ -1,139 +1,154 @@
 export const rooms = {
     nl: [
         {
-            slug: "loft-blue",
-            title: "Loft Blue",
-            headline: "Luxe Tuinloft",
-            desc: "Een prachtige loft van 65 m² met uitzicht op de tuin. Beschikt over een eigen keuken, privé badkamer en eigen entree. Inclusief streaming TV (Netflix).",
-            longDesc: "Loft Blue is onze parel aan de tuin. Met 65 m² aan ruimte, een sfeervolle inrichting en openslaande deuren naar het groen, is dit de perfecte plek om tot rust te komen. De loft beschikt over een luxe boxspring, een volledig uitgeruste keuken en een moderne badkamer met regendouche.",
-            amenities: ["65 m²", "Privé badkamer", "Eigen keuken", "Tuinzicht", "Privé terras", "Smart TV", "Wifi", "Koffie & Thee"],
-            price: "€ 135 / nacht",
+            slug: "abt",
+            title: "Abt",
+            headline: "Sfeervol appartement begane grond",
+            desc: "Een gezellig appartement van 32 m² met eigen entree en uitzicht op de tuin.",
+            longDesc: "Appartement Abt is gelegen op de begane grond en biedt een prachtig uitzicht op de tuin. Met 32 m² is het een knusse ruimte met een kitchenette, privé badkamer en eigen entree. Ideaal voor een ontspannen verblijf.",
+            amenities: ["32 m²", "Privé badkamer", "Kitchenette", "Uitzicht op tuin", "Eigen entree", "Gratis WiFi"],
+            price: "Prijs op aanvraag",
             images: [
-                "/images/de-gaanderij/loft-blue-01.jpeg",
-                "/images/de-gaanderij/loft-blue-02.webp",
-                "/images/de-gaanderij/loft-blue-03.jpeg"
+                "/images/claercamp/rooms/abt/46075d97-c910-4f89-bdeb-e915f4b032d0_mw1280.webp",
+                "/images/claercamp/rooms/abt/2bb1a5ee-c15c-4ea9-88bd-0ce9ac7d790d_mw1280.webp",
+                "/images/claercamp/rooms/abt/604476fc-1650-41d5-a181-97e96f95db32_mw1280.webp",
+                "/images/claercamp/rooms/abt/9249c4d0-00e0-4d7f-bf5f-f57c4f74e6c0_mw1280.webp",
+                "/images/claercamp/rooms/abt/ace9b7a9-ca1e-421d-aa55-35b18f479ce6_mw1280.webp"
             ]
         },
         {
-            slug: "loft-yellow",
-            title: "Loft Yellow",
-            headline: "Ruim & Licht",
-            desc: "Ruime loft van 65 m² met eigen entree en keuken. Geniet van privacy en comfort met gratis WiFi en koffie- en theefaciliteiten.",
-            longDesc: "Loft Yellow kenmerkt zich door zijn lichte karakter en speelse indeling. Deze loft biedt alle privacy die u wenst, met een eigen ingang en een complete keuken. Perfect voor een langer verblijf in de regio Rotterdam.",
-            amenities: ["65 m²", "Eigen keuken", "Privé badkamer", "Kitchenette", "Eethoek", "Wifi", "Smart TV"],
-            price: "€ 135 / nacht",
+            slug: "priorij",
+            title: "Priorij",
+            headline: "Ruim appartement met eigen terras",
+            desc: "Royaal appartement van 75 m² met volledige keuken en privéterras.",
+            longDesc: "De Priorij is ons grootste appartement (75 m²) en van alle gemakken voorzien. Het beschikt over een volledige keuken met vaatwasser, een ruime badkamer en een heerlijk privéterras. Perfect voor wie van ruimte en comfort houdt.",
+            amenities: ["75 m²", "Privé badkamer", "Privéterras", "Eigen keuken", "Vaatwasser", "Eigen entree", "Gratis WiFi"],
+            price: "Prijs op aanvraag",
             images: [
-                "/images/de-gaanderij/loft-yellow-01.webp",
-                "/images/de-gaanderij/loft-yellow-02.jpeg",
-                "/images/de-gaanderij/loft-yellow-03.webp",
-                "/images/de-gaanderij/loft-yellow-04.jpeg"
+                "/images/claercamp/rooms/priorij/839a7dd1-7531-4ad2-88d5-a44838798e2a_mw1280.webp",
+                "/images/claercamp/rooms/priorij/24dde1c6-ace5-4da5-b104-6a753c40eefd_mw1280.webp",
+                "/images/claercamp/rooms/priorij/289b6bac-28d2-4b42-8d72-f809f340f352_mw1280.webp",
+                "/images/claercamp/rooms/priorij/4c39eddf-0538-4b87-9683-f9d70f18608f_mw1280.webp",
+                "/images/claercamp/rooms/priorij/5d412c30-20a3-4124-b79f-ff200df3bee8_mw1280.webp",
+                "/images/claercamp/rooms/priorij/d8f057f2-18a5-4018-91c2-b602d316f98e_mw1280.webp",
+                "/images/claercamp/rooms/priorij/ebcf409d-e16f-46b7-83e5-68a13d147dc4_mw1280.webp",
+                "/images/claercamp/rooms/priorij/fc7c811a-86ca-4265-96e6-91cc1b2b37f4_mw1280.webp"
             ]
         },
         {
-            slug: "attic-loft",
-            title: "Attic Loft",
-            headline: "Sfeervol onder de Balken",
-            desc: "Onze grootste loft van 70 m² met gezamenlijke badkamer. Een gezellige ruimte onder het dak met eigen entree en koffiefaciliteiten.",
-            longDesc: "De Attic Loft is onze meest romantische kamer, gelegen onder de authentieke dakbalken van de boerderij. Met 70 m² is het zeer ruim opgezet. Let op: deze loft maakt gebruik van een gedeelde luxe badkamer.",
-            amenities: ["70 m²", "Gezamenlijke badkamer", "Eigen entree", "Gratis WiFi", "Koffiecorner", "Zithoek"],
-            price: "€ 115 / nacht",
+            slug: "schiere-monnik",
+            title: "Schiere Monnik",
+            headline: "Comfortabele gastenkamer",
+            desc: "Fijne kamer van 31 m² met koffie- en theefaciliteiten.",
+            longDesc: "De Schiere Monnik is een comfortabele kamer van 31 m². U beschikt over een eigen badkamer en gratis WiFi. Koffie- en theefaciliteiten zijn aanwezig voor een ontspannen start van de dag.",
+            amenities: ["31 m²", "Privé badkamer", "Gratis WiFi", "Koffie- en theefaciliteiten"],
+            price: "Prijs op aanvraag",
             images: [
-                "/images/de-gaanderij/attic-loft-01.webp",
-                "/images/de-gaanderij/attic-loft-02.webp",
-                "/images/de-gaanderij/attic-loft-03.webp",
-                "/images/de-gaanderij/attic-loft-04.webp"
+                "/images/claercamp/rooms/schiere-monnik/53e43875-d6c6-4830-9670-2af258e3f5db_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/52f2815f-fa8d-4513-9fcb-4439bb3db071_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/c6cf6650-fd85-4d6b-8f1d-454e9d898b11_mw1280.jpeg"
             ]
         }
     ],
     en: [
         {
-            slug: "loft-blue",
-            title: "Loft Blue",
-            headline: "Luxury Garden Loft",
-            desc: "A beautiful 65 m² loft with garden view. Features a private kitchen, private bathroom and private entrance. Includes streaming TV (Netflix).",
-            longDesc: "Loft Blue is our gem by the garden. With 65 m² of space, atmospheric decor, and patio doors opening to the greenery, this is the perfect place to unwind. The loft features a luxury boxspring, a fully equipped kitchen, and a modern bathroom with rain shower.",
-            amenities: ["65 m²", "Private bathroom", "Private kitchen", "Garden view", "Private terrace", "Smart TV", "Wifi", "Coffee & Tea"],
-            price: "€ 135 / night",
+            slug: "abt",
+            title: "Abbot",
+            headline: "Cozy ground floor apartment",
+            desc: "A cozy 32 m² apartment with private entrance and garden view.",
+            longDesc: "Apartment Abbot is located on the ground floor and offers a beautiful view of the garden. With 32 m², it is a cozy space with a kitchenette, private bathroom, and private entrance. Ideal for a relaxing stay.",
+            amenities: ["32 m²", "Private bathroom", "Kitchenette", "Garden view", "Private entrance", "Free WiFi"],
+            price: "Price on request",
             images: [
-                "/images/de-gaanderij/loft-blue-01.jpeg",
-                "/images/de-gaanderij/loft-blue-02.webp",
-                "/images/de-gaanderij/loft-blue-03.jpeg"
+                "/images/claercamp/rooms/abt/46075d97-c910-4f89-bdeb-e915f4b032d0_mw1280.webp",
+                "/images/claercamp/rooms/abt/2bb1a5ee-c15c-4ea9-88bd-0ce9ac7d790d_mw1280.webp",
+                "/images/claercamp/rooms/abt/604476fc-1650-41d5-a181-97e96f95db32_mw1280.webp",
+                "/images/claercamp/rooms/abt/9249c4d0-00e0-4d7f-bf5f-f57c4f74e6c0_mw1280.webp",
+                "/images/claercamp/rooms/abt/ace9b7a9-ca1e-421d-aa55-35b18f479ce6_mw1280.webp"
             ]
         },
         {
-            slug: "loft-yellow",
-            title: "Loft Yellow",
-            headline: "Spacious & Bright",
-            desc: "Spacious 65 m² loft with private entrance and kitchen. Enjoy privacy and comfort with free WiFi and coffee/tea facilities.",
-            longDesc: "Loft Yellow is characterized by its bright character and playful layout. This loft offers all the privacy you desire, with a private entrance and a complete kitchen. Perfect for a longer stay in the Rotterdam region.",
-            amenities: ["65 m²", "Private kitchen", "Private bathroom", "Kitchenette", "Dining area", "Wifi", "Smart TV"],
-            price: "€ 135 / night",
+            slug: "priorij",
+            title: "Priory",
+            headline: "Spacious apartment with private terrace",
+            desc: "Generous 75 m² apartment with full kitchen and private terrace.",
+            longDesc: "The Priory is our largest apartment (75 m²) and fully equipped. It features a full kitchen with dishwasher, a spacious bathroom, and a lovely private terrace. Perfect for those who love space and comfort.",
+            amenities: ["75 m²", "Private bathroom", "Private terrace", "Private kitchen", "Dishwasher", "Private entrance", "Free WiFi"],
+            price: "Price on request",
             images: [
-                "/images/de-gaanderij/loft-yellow-01.webp",
-                "/images/de-gaanderij/loft-yellow-02.jpeg",
-                "/images/de-gaanderij/loft-yellow-03.webp",
-                "/images/de-gaanderij/loft-yellow-04.jpeg"
+                "/images/claercamp/rooms/priorij/839a7dd1-7531-4ad2-88d5-a44838798e2a_mw1280.webp",
+                "/images/claercamp/rooms/priorij/24dde1c6-ace5-4da5-b104-6a753c40eefd_mw1280.webp",
+                "/images/claercamp/rooms/priorij/289b6bac-28d2-4b42-8d72-f809f340f352_mw1280.webp",
+                "/images/claercamp/rooms/priorij/4c39eddf-0538-4b87-9683-f9d70f18608f_mw1280.webp",
+                "/images/claercamp/rooms/priorij/5d412c30-20a3-4124-b79f-ff200df3bee8_mw1280.webp",
+                "/images/claercamp/rooms/priorij/d8f057f2-18a5-4018-91c2-b602d316f98e_mw1280.webp",
+                "/images/claercamp/rooms/priorij/ebcf409d-e16f-46b7-83e5-68a13d147dc4_mw1280.webp",
+                "/images/claercamp/rooms/priorij/fc7c811a-86ca-4265-96e6-91cc1b2b37f4_mw1280.webp"
             ]
         },
         {
-            slug: "attic-loft",
-            title: "Attic Loft",
-            headline: "Atmospheric under the Beams",
-            desc: "Our largest loft of 70 m² with shared bathroom. A cozy space under the roof with private entrance and coffee facilities.",
-            longDesc: "The Attic Loft is our most romantic room, situated under the authentic roof beams of the farm. With 70 m², it is very spacious. Note: this loft uses a shared luxury bathroom.",
-            amenities: ["70 m²", "Shared bathroom", "Private entrance", "Free WiFi", "Coffee corner", "Sitting area"],
-            price: "€ 115 / night",
+            slug: "schiere-monnik",
+            title: "Grey Monk",
+            headline: "Comfortable guest room",
+            desc: "Nice 31 m² room with coffee and tea facilities.",
+            longDesc: "The Grey Monk is a comfortable 31 m² room. You have a private bathroom and free WiFi. Coffee and tea facilities are available for a relaxed start to the day.",
+            amenities: ["31 m²", "Private bathroom", "Free WiFi", "Coffee and tea facilities"],
+            price: "Price on request",
             images: [
-                "/images/de-gaanderij/attic-loft-01.webp",
-                "/images/de-gaanderij/attic-loft-02.webp",
-                "/images/de-gaanderij/attic-loft-03.webp",
-                "/images/de-gaanderij/attic-loft-04.webp"
+                "/images/claercamp/rooms/schiere-monnik/53e43875-d6c6-4830-9670-2af258e3f5db_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/52f2815f-fa8d-4513-9fcb-4439bb3db071_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/c6cf6650-fd85-4d6b-8f1d-454e9d898b11_mw1280.jpeg"
             ]
         }
     ],
     de: [
         {
-            slug: "loft-blue",
-            title: "Loft Blue",
-            headline: "Luxus-Gartenloft",
-            desc: "Ein schönes 65 m² Loft mit Gartenblick. Verfügt über eine eigene Küche, ein eigenes Bad und einen eigenen Eingang. Inklusive Streaming-TV (Netflix).",
-            longDesc: "Loft Blue ist unser Juwel am Garten. Mit 65 m² Platz, stimmungsvoller Einrichtung und Terrassentüren zum Grünen ist dies der perfekte Ort zum Entspannen. Das Loft verfügt über ein Luxus-Boxspringbett, eine voll ausgestattete Küche und ein modernes Bad mit Regendusche.",
-            amenities: ["65 m²", "Privates Bad", "Eigene Küche", "Gartenblick", "Private Terrasse", "Smart TV", "Wlan", "Kaffee & Tee"],
-            price: "€ 135 / Nacht",
+            slug: "abt",
+            title: "Abt",
+            headline: "Gemütliche Erdgeschosswohnung",
+            desc: "Ein gemütliches 32 m² Apartment mit eigenem Eingang und Gartenblick.",
+            longDesc: "Das Apartment Abt befindet sich im Erdgeschoss und bietet einen schönen Blick auf den Garten. Mit 32 m² ist es ein gemütlicher Raum mit Kochnische, eigenem Bad und eigenem Eingang. Ideal für einen erholsamen Aufenthalt.",
+            amenities: ["32 m²", "Privates Bad", "Kochnische", "Gartenblick", "Eigener Eingang", "Gratis WiFi"],
+            price: "Preis auf Anfrage",
             images: [
-                "/images/de-gaanderij/loft-blue-01.jpeg",
-                "/images/de-gaanderij/loft-blue-02.webp",
-                "/images/de-gaanderij/loft-blue-03.jpeg"
+                "/images/claercamp/rooms/abt/46075d97-c910-4f89-bdeb-e915f4b032d0_mw1280.webp",
+                "/images/claercamp/rooms/abt/2bb1a5ee-c15c-4ea9-88bd-0ce9ac7d790d_mw1280.webp",
+                "/images/claercamp/rooms/abt/604476fc-1650-41d5-a181-97e96f95db32_mw1280.webp",
+                "/images/claercamp/rooms/abt/9249c4d0-00e0-4d7f-bf5f-f57c4f74e6c0_mw1280.webp",
+                "/images/claercamp/rooms/abt/ace9b7a9-ca1e-421d-aa55-35b18f479ce6_mw1280.webp"
             ]
         },
         {
-            slug: "loft-yellow",
-            title: "Loft Yellow",
-            headline: "Geräumig & Hell",
-            desc: "Geräumiges 65 m² Loft mit eigenem Eingang und Küche. Genießen Sie Privatsphäre und Komfort mit kostenlosem WLAN und Kaffee-/Teezubehör.",
-            longDesc: "Loft Yellow zeichnet sich durch seinen hellen Charakter und die verspielte Aufteilung aus. Dieses Loft bietet alle Privatsphäre, die Sie sich wünschen, mit eigenem Eingang und kompletter Küche. Perfekt für einen längeren Aufenthalt in der Region Rotterdam.",
-            amenities: ["65 m²", "Eigene Küche", "Privates Bad", "Kochnische", "Essbereich", "Wlan", "Smart TV"],
-            price: "€ 135 / Nacht",
+            slug: "priorij",
+            title: "Priorij",
+            headline: "Geräumiges Apartment mit eigener Terrasse",
+            desc: "Großzügiges 75 m² Apartment mit voll ausgestatteter Küche und privater Terrasse.",
+            longDesc: "Die Priorij ist unser größtes Apartment (75 m²) und mit allem Komfort ausgestattet. Es verfügt über eine komplette Küche mit Geschirrspüler, ein geräumiges Bad und eine schöne private Terrasse. Perfekt für alle, die Platz und Komfort lieben.",
+            amenities: ["75 m²", "Privates Bad", "Private Terrasse", "Eigene Küche", "Geschirrspüler", "Eigener Eingang", "Gratis WiFi"],
+            price: "Preis auf Anfrage",
             images: [
-                "/images/de-gaanderij/loft-yellow-01.webp",
-                "/images/de-gaanderij/loft-yellow-02.jpeg",
-                "/images/de-gaanderij/loft-yellow-03.webp",
-                "/images/de-gaanderij/loft-yellow-04.jpeg"
+                "/images/claercamp/rooms/priorij/839a7dd1-7531-4ad2-88d5-a44838798e2a_mw1280.webp",
+                "/images/claercamp/rooms/priorij/24dde1c6-ace5-4da5-b104-6a753c40eefd_mw1280.webp",
+                "/images/claercamp/rooms/priorij/289b6bac-28d2-4b42-8d72-f809f340f352_mw1280.webp",
+                "/images/claercamp/rooms/priorij/4c39eddf-0538-4b87-9683-f9d70f18608f_mw1280.webp",
+                "/images/claercamp/rooms/priorij/5d412c30-20a3-4124-b79f-ff200df3bee8_mw1280.webp",
+                "/images/claercamp/rooms/priorij/d8f057f2-18a5-4018-91c2-b602d316f98e_mw1280.webp",
+                "/images/claercamp/rooms/priorij/ebcf409d-e16f-46b7-83e5-68a13d147dc4_mw1280.webp",
+                "/images/claercamp/rooms/priorij/fc7c811a-86ca-4265-96e6-91cc1b2b37f4_mw1280.webp"
             ]
         },
         {
-            slug: "attic-loft",
-            title: "Attic Loft",
-            headline: "Atmosphärisch unter den Balken",
-            desc: "Unser größtes Loft von 70 m² mit Gemeinschaftsbad. Ein gemütlicher Raum unter dem Dach mit eigenem Eingang und Kaffeezubehör.",
-            longDesc: "Das Attic Loft ist unser romantischstes Zimmer, gelegen unter den authentischen Dachbalken des Bauernhofs. Mit 70 m² ist es sehr geräumig. Hinweis: Dieses Loft nutzt ein gemeinsames Luxusbad.",
-            amenities: ["70 m²", "Gemeinschaftsbad", "Eigener Eingang", "Gratis WiFi", "Kaffeeecke", "Sitzecke"],
-            price: "€ 115 / Nacht",
+            slug: "schiere-monnik",
+            title: "Schiere Monnik",
+            headline: "Komfortables Gästezimmer",
+            desc: "Schönes 31 m² Zimmer mit Kaffee- und Teezubehör.",
+            longDesc: "Der Schiere Monnik ist ein komfortables 31 m² großes Zimmer. Sie verfügen über ein eigenes Bad und kostenloses WLAN. Kaffee- und Teezubehör stehen für einen entspannten Start in den Tag bereit.",
+            amenities: ["31 m²", "Privates Bad", "Gratis WiFi", "Kaffee- und Teezubehör"],
+            price: "Preis auf Anfrage",
             images: [
-                "/images/de-gaanderij/attic-loft-01.webp",
-                "/images/de-gaanderij/attic-loft-02.webp",
-                "/images/de-gaanderij/attic-loft-03.webp",
-                "/images/de-gaanderij/attic-loft-04.webp"
+                "/images/claercamp/rooms/schiere-monnik/53e43875-d6c6-4830-9670-2af258e3f5db_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/52f2815f-fa8d-4513-9fcb-4439bb3db071_mw1280.webp",
+                "/images/claercamp/rooms/schiere-monnik/c6cf6650-fd85-4d6b-8f1d-454e9d898b11_mw1280.jpeg"
             ]
         }
     ]

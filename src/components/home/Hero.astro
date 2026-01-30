@@ -5,16 +5,16 @@ const { lang } = Astro.props;
 
 const content = {
   nl: {
-    subtitle: "Luxe gastenverblijf in een landelijke omgeving",
-    cta: "Bekijk kamers"
+    subtitle: "Woonboerderij & Appartementen in Friesland",
+    cta: "Bekijk accommodaties"
   },
   en: {
-    subtitle: "Luxury guesthouse in a rural setting",
-    cta: "View rooms"
+    subtitle: "Farmhouse & Apartments in Friesland",
+    cta: "View accommodations"
   },
   de: {
-    subtitle: "Luxus-Gästehaus in ländlicher Umgebung",
-    cta: "Zimmer ansehen"
+    subtitle: "Bauernhaus & Apartments in Friesland",
+    cta: "Unterkünfte ansehen"
   }
 };
 
@@ -25,8 +25,8 @@ const t = content[lang] || content.nl;
   
   <div class="absolute inset-0 z-0">
     <img 
-      src="/images/de-gaanderij/hero-final.jpeg" 
-      alt="De Gaanderij Bed and Breakfast" 
+      src="/images/claercamp/hero_home.webp" 
+      alt="Accommodatie Claercamp" 
       class="w-full h-full object-cover animate-scale-slow"
     />
     <div class="absolute inset-0 bg-slate-900/40"></div>
@@ -38,20 +38,20 @@ const t = content[lang] || content.nl;
     <ScrollReveal animation="fade-up" duration={1} delay={0.2}>
         <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 mb-8">
             <p class="text-white text-xs md:text-sm font-bold uppercase tracking-widest">
-                Barendrecht • Zuid-Holland
+                Rinsumageest • Friesland
             </p>
         </div>
     </ScrollReveal>
 
     <ScrollReveal animation="fade-up" duration={1} delay={0.3}>
         <h1 class="text-6xl md:text-8xl lg:text-9xl text-white font-heading font-bold tracking-tighter leading-none mb-8 drop-shadow-xl">
-            DE GAANDERIJ
+            CLAERCAMP
         </h1>
     </ScrollReveal>
 
     <ScrollReveal animation="fade-up" duration={1} delay={0.4}>
         <p class="text-white/90 text-xl md:text-2xl font-medium max-w-2xl mx-auto mb-12 leading-relaxed">
-            {lang === 'nl' ? 'Modern comfort & gastvrijheid' : (lang === 'de' ? 'Moderner Komfort & Gastfreundschaft' : 'Modern Living & Hospitality')}
+            {lang === 'nl' ? 'Rust, ruimte & historie' : (lang === 'de' ? 'Ruhe, Raum & Geschichte' : 'Peace, space & history')}
         </p>
     </ScrollReveal>
 

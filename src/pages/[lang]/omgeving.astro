@@ -16,86 +16,86 @@ const { lang } = Astro.params;
 const content = {
   nl: {
     title: "Omgeving",
-    headline: "Ontdek Barendrecht & Rotterdam",
-    intro: "Gelegen onder de rook van Rotterdam, biedt B&B De Gaanderij de perfecte uitvalsbasis voor stad, natuur en cultuur.",
+    headline: "Ontdek Friesland & Dokkum",
+    intro: "Gelegen in het prachtige Friese landschap, biedt Accommodatie Claercamp de perfecte uitvalsbasis voor natuur, cultuur en de historische Elfstedenstad Dokkum.",
     labels: {
       highlights: "Highlights",
       dining: "Eten & Drinken",
       sights: "Bezienswaardigheden"
     },
     spots: [
-      { title: "Rotterdam Centrum", desc: "Binnen 15 minuten in het hart van Rotterdam. Ontdek de Markthal, Kubuswoningen en de Euromast." },
-      { title: "Oude Maas", desc: "Prachtige wandel- en fietsroutes langs de Oude Maas. Geniet van de rust en het uitzicht over het water." },
-      { title: "Kinderdijk", desc: "Werelderfgoed op fietsafstand. Bezoek de 19 molens en leer alles over het Nederlandse watermanagement." },
-      { title: "Biesbosch", desc: "Nationaal Park De Biesbosch ligt op korte afstand. Huur een bootje of ga mee met een rondvaart." }
+      { title: "Dokkum", desc: "Historische vestingstad en een van de Friese Elfsteden. Bekend om de grachten, bolwerken en Bonifatius." },
+      { title: "Nationaal Park Lauwersmeer", desc: "Prachtig natuurgebied waar zoet en zout water samenkomen. Ideaal voor wandelen, fietsen en vogels spotten." },
+      { title: "Waddeneilanden", desc: "De veerboot naar Ameland (Holwerd) of Schiermonnikoog (Lauwersoog) is dichtbij." },
+      { title: "Leeuwarden", desc: "Culturele Hoofdstad (2018) met musea, winkels en horeca, op slechts 20 minuten rijden." }
     ],
     dining: [
-      { name: "Oude Maas", desc: "Dineren met uitzicht op de rivier." },
-      { name: "Centrum Barendrecht", desc: "Diverse gezellige restaurants en terrassen in het oude centrum." },
-      { name: "Markthal Rotterdam", desc: "Een culinaire belevenis met kraampjes en restaurants van over de hele wereld." },
-      { name: "Hotel Ara", desc: "Luxe dineren in een prachtige omgeving." }
+      { name: "Herberg de Waard", desc: "Gezellig dineren in Rinsumageest." },
+      { name: "KB Food & Drinks (Dokkum)", desc: "Heerlijk eten in een sfeervol pakhuis." },
+      { name: "Proeflokaal 't Raedhûs", desc: "Voor de fijnproevers in Dokkum." },
+      { name: "De Posthoorn", desc: "Gezellig eetcafé in Dokkum." }
     ],
     sights: [
-      { name: "Euromast", desc: "Het hoogste uitkijkpunt van Nederland." },
-      { name: "Erasmusbrug", desc: "Het icoon van Rotterdam, 'De Zwaan'." },
-      { name: "Diergaarde Blijdorp", desc: "Een van de mooiste dierentuinen van Europa." },
-      { name: "SS Rotterdam", desc: "Ontdek het historische stoomschip aan de kade." }
+      { name: "Bonifatiuskapel", desc: "Bedevaartsplaats in Dokkum." },
+      { name: "Admiraliteitshuis", desc: "Museum over de historie van Dokkum en de Admiraliteit." },
+      { name: "De Klaarkamp", desc: "Voormalige kloosterlocatie in Rinsumageest, rijk aan archeologie." },
+      { name: "Kerken van Rinsumageest", desc: "De Alexanderkerk (met Romaanse crypte) is een bezoek waard." }
     ]
   },
   en: {
     title: "Surroundings",
-    headline: "Discover Barendrecht & Rotterdam",
-    intro: "Located near Rotterdam, B&B De Gaanderij offers the perfect base for city, nature, and culture.",
+    headline: "Discover Friesland & Dokkum",
+    intro: "Located in the beautiful Frisian landscape, Accommodatie Claercamp offers the perfect base for nature, culture, and the historic Eleven Cities town of Dokkum.",
     labels: {
       highlights: "Highlights",
       dining: "Dining & Drinks",
       sights: "Sights"
     },
     spots: [
-      { title: "Rotterdam Center", desc: "Within 15 minutes in the heart of Rotterdam. Discover the Markthal, Cube Houses and the Euromast." },
-      { title: "Old Meuse", desc: "Beautiful walking and cycling routes along the Old Meuse river. Enjoy the peace and the view over the water." },
-      { title: "Kinderdijk", desc: "World Heritage within cycling distance. Visit the 19 windmills and learn all about Dutch water management." },
-      { title: "Biesbosch", desc: "National Park De Biesbosch is a short distance away. Rent a boat or join a cruise." }
+      { title: "Dokkum", desc: "Historic fortified city and one of the Frisian Eleven Cities. Known for its canals, ramparts, and Boniface." },
+      { title: "Lauwersmeer National Park", desc: "Beautiful nature reserve where fresh and salt water meet. Ideal for walking, cycling, and bird watching." },
+      { title: "Wadden Islands", desc: "The ferry to Ameland (Holwerd) or Schiermonnikoog (Lauwersoog) is nearby." },
+      { title: "Leeuwarden", desc: "Cultural Capital (2018) with museums, shops, and restaurants, just a 20-minute drive away." }
     ],
     dining: [
-      { name: "Old Meuse", desc: "Dining with a view of the river." },
-      { name: "Barendrecht Center", desc: "Various cozy restaurants and terraces in the old center." },
-      { name: "Markthal Rotterdam", desc: "A culinary experience with stalls and restaurants from all over the world." },
-      { name: "Hotel Ara", desc: "Luxury dining in a beautiful setting." }
+      { name: "Herberg de Waard", desc: "Cozy dining in Rinsumageest." },
+      { name: "KB Food & Drinks (Dokkum)", desc: "Delicious food in an atmospheric warehouse." },
+      { name: "Proeflokaal 't Raedhûs", desc: "For gourmets in Dokkum." },
+      { name: "De Posthoorn", desc: "Cozy eatery in Dokkum." }
     ],
     sights: [
-      { name: "Euromast", desc: "The highest lookout point in the Netherlands." },
-      { name: "Erasmus Bridge", desc: "The icon of Rotterdam, 'The Swan'." },
-      { name: "Rotterdam Zoo", desc: "One of the most beautiful zoos in Europe." },
-      { name: "SS Rotterdam", desc: "Discover the historic steamship at the quay." }
+      { name: "Bonifatius Chapel", desc: "Pilgrimage site in Dokkum." },
+      { name: "Admiraliteitshuis", desc: "Museum about the history of Dokkum and the Admiralty." },
+      { name: "De Klaarkamp", desc: "Former monastery site in Rinsumageest, rich in archaeology." },
+      { name: "Churches of Rinsumageest", desc: "The Alexander Church (with Romanesque crypt) is worth a visit." }
     ]
   },
   de: {
     title: "Umgebung",
-    headline: "Entdecken Sie Barendrecht & Rotterdam",
-    intro: "In der Nähe von Rotterdam gelegen, bietet das B&B De Gaanderij den perfekten Ausgangspunkt für Stadt, Natur und Kultur.",
+    headline: "Entdecken Sie Friesland & Dokkum",
+    intro: "In der wunderschönen friesischen Landschaft gelegen, bietet Accommodatie Claercamp den perfekten Ausgangspunkt für Natur, Kultur und die historische Elfstedenstadt Dokkum.",
     labels: {
       highlights: "Highlights",
       dining: "Essen & Trinken",
       sights: "Sehenswürdigkeiten"
     },
     spots: [
-      { title: "Rotterdam Zentrum", desc: "Innerhalb von 15 Minuten im Herzen von Rotterdam. Entdecken Sie die Markthal, Kubushäuser und den Euromast." },
-      { title: "Alte Maas", desc: "Wunderschöne Wander- und Radwege entlang der Alten Maas. Genießen Sie die Ruhe und den Blick auf das Wasser." },
-      { title: "Kinderdijk", desc: "Weltkulturerbe in Fahrradentfernung. Besuchen Sie die 19 Mühlen und erfahren Sie alles über das niederländische Wassermanagement." },
-      { title: "Biesbosch", desc: "Nationalpark De Biesbosch ist nur eine kurze Strecke entfernt. Mieten Sie ein Boot oder machen Sie eine Kreuzfahrt." }
+      { title: "Dokkum", desc: "Historische Festungsstadt und eine der friesischen elf Städte. Bekannt für Grachten, Bollwerke und Bonifatius." },
+      { title: "Nationalpark Lauwersmeer", desc: "Schönes Naturschutzgebiet, in dem Süß- und Salzwasser aufeinandertreffen. Ideal zum Wandern, Radfahren und Vogelbeobachten." },
+      { title: "Watteninseln", desc: "Die Fähre nach Ameland (Holwerd) oder Schiermonnikoog (Lauwersoog) ist in der Nähe." },
+      { title: "Leeuwarden", desc: "Kulturhauptstadt (2018) mit Museen, Geschäften und Restaurants, nur 20 Autominuten entfernt." }
     ],
     dining: [
-      { name: "Alte Maas", desc: "Essen mit Blick auf den Fluss." },
-      { name: "Zentrum Barendrecht", desc: "Verschiedene gemütliche Restaurants und Terrassen im alten Zentrum." },
-      { name: "Markthal Rotterdam", desc: "Ein kulinarisches Erlebnis mit Ständen und Restaurants aus aller Welt." },
-      { name: "Hotel Ara", desc: "Luxuriöses Essen in wunderschöner Umgebung." }
+      { name: "Herberg de Waard", desc: "Gemütliches Abendessen in Rinsumageest." },
+      { name: "KB Food & Drinks (Dokkum)", desc: "Leckeres Essen in einem stimmungsvollen Lagerhaus." },
+      { name: "Proeflokaal 't Raedhûs", desc: "Für Feinschmecker in Dokkum." },
+      { name: "De Posthoorn", desc: "Gemütliches Lokal in Dokkum." }
     ],
     sights: [
-      { name: "Euromast", desc: "Der höchste Aussichtspunkt der Niederlande." },
-      { name: "Erasmusbrücke", desc: "Das Wahrzeichen von Rotterdam, 'Der Schwan'." },
-      { name: "Zoo Blijdorp", desc: "Einer der schönsten Zoos in Europa." },
-      { name: "SS Rotterdam", desc: "Entdecken Sie das historische Dampfschiff am Kai." }
+      { name: "Bonifatius-Kapelle", desc: "Wallfahrtsort in Dokkum." },
+      { name: "Admiraliteitshuis", desc: "Museum über die Geschichte von Dokkum und der Admiralität." },
+      { name: "De Klaarkamp", desc: "Ehemaliger Klosterstandort in Rinsumageest, reich an Archäologie." },
+      { name: "Kirchen von Rinsumageest", desc: "Die Alexanderkirche (mit romanischer Krypta) ist einen Besuch wert." }
     ]
   }
 };
@@ -107,27 +107,27 @@ const sections = [
         id: 'highlights',
         label: t.labels.highlights,
         items: t.spots,
-        image: '/images/de-gaanderij/outdoor-03.webp', 
+        image: '/images/claercamp/exterior.webp', 
         align: 'left'
     },
     {
         id: 'dining',
         label: t.labels.dining,
         items: t.dining.map(i => ({ title: i.name, desc: i.desc })),
-        image: '/images/de-gaanderij/gallery_06.webp', 
+        image: '/images/claercamp/living.webp', 
         align: 'right'
     },
     {
         id: 'sights',
         label: t.labels.sights,
         items: t.sights.map(i => ({ title: i.name, desc: i.desc })),
-        image: '/images/de-gaanderij/outdoor-02.webp', 
+        image: '/images/claercamp/garden.webp', 
         align: 'left'
     }
 ];
 ---
 
-<Layout title={`B&B De Gaanderij - ${t.title}`} lang={lang}>
+<Layout title={`Accommodatie Claercamp - ${t.title}`} lang={lang}>
   
   <!-- Hero -->
   <div class="relative py-32 bg-stone-50 text-center overflow-hidden">

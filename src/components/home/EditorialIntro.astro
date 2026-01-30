@@ -7,28 +7,28 @@ const { lang } = Astro.props;
 
 const content = {
   nl: {
-    title: "Rust & Comfort",
-    desc: "De Gaanderij biedt drie unieke gastenkamers, elk met een eigen karakter. Geniet van luxe faciliteiten, een privétuin en een heerlijk ontbijt met streekproducten. Een perfecte uitvalsbasis in Barendrecht.",
-    stat1: "9.2",
-    stat1Label: "Fantastische Score",
+    title: "Uniek Overnachten",
+    desc: "Accommodatie Claercamp biedt unieke appartementen en gastenkamers in een verbouwde woonboerderij. Geniet van rust, ruimte en privacy. Gelegen in het Friese Rinsumageest, op historische grond.",
+    stat1: "9.6",
+    stat1Label: "Voortreffelijke Score",
     stat2: "3",
-    stat2Label: "Unieke Lofts"
+    stat2Label: "Unieke Verblijven"
   },
   en: {
-    title: "Rest & Comfort",
-    desc: "De Gaanderij offers three unique guest rooms, each with its own character. Enjoy luxury facilities, a private garden and a delicious breakfast with local products. A perfect base in Barendrecht.",
-    stat1: "9.2",
-    stat1Label: "Fantastic Score",
+    title: "Unique Stay",
+    desc: "Accommodatie Claercamp offers unique apartments and guest rooms in a converted farmhouse. Enjoy peace, space, and privacy. Located in the Frisian Rinsumageest, on historic grounds.",
+    stat1: "9.6",
+    stat1Label: "Excellent Score",
     stat2: "3",
-    stat2Label: "Unique Lofts"
+    stat2Label: "Unique Stays"
   },
   de: {
-    title: "Ruhe & Komfort",
-    desc: "De Gaanderij bietet drei einzigartige Gästezimmer, jedes mit eigenem Charakter. Genießen Sie luxuriöse Einrichtungen, einen privaten Garten und ein köstliches Frühstück mit regionalen Produkten.",
-    stat1: "9.2",
-    stat1Label: "Fantastische Punktzahl",
+    title: "Einzigartiger Aufenthalt",
+    desc: "Accommodatie Claercamp bietet einzigartige Apartments und Gästezimmer in einem umgebauten Bauernhaus. Genießen Sie Ruhe, Raum und Privatsphäre. Gelegen im friesischen Rinsumageest, auf historischem Boden.",
+    stat1: "9.6",
+    stat1Label: "Hervorragende Bewertung",
     stat2: "3",
-    stat2Label: "Einzigartige Lofts"
+    stat2Label: "Einzigartige Unterkünfte"
   }
 };
 
@@ -44,7 +44,7 @@ const t = content[lang] || content.nl;
         <ScrollReveal animation="fade-up" duration={0.8}>
             <div class="flex items-center gap-4 mb-6">
                  <div class="w-8 h-1 bg-sea-blue"></div>
-                 <span class="text-sea-blue font-bold uppercase tracking-widest text-xs">Since 2024</span>
+                 <span class="text-sea-blue font-bold uppercase tracking-widest text-xs">Adults Only</span>
             </div>
             <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
               {t.title}
@@ -70,9 +70,9 @@ const t = content[lang] || content.nl;
          <div class="relative pl-0 lg:pl-12">
             <ImageSlider 
                images={[
-                 "/images/de-gaanderij/loft-blue-02.webp",
-                 "/images/de-gaanderij/loft-yellow-01.webp",
-                 "/images/de-gaanderij/attic-loft-01.webp",
+                 "/images/claercamp/room_priorij.webp",
+                 "/images/claercamp/living.webp",
+                 "/images/claercamp/exterior.webp",
                ]} 
                id="intro-slider"
                height="h-[400px] md:h-[600px]"
